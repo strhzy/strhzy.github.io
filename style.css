@@ -50,9 +50,7 @@ body {
   }
 
   #card img {
-    width: 66%;
-    max-width: 280px;
-    min-width: 180px;
+    width: 50%;
     margin: 15px auto;
   }
 }
