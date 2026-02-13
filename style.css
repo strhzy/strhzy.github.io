@@ -1,0 +1,97 @@
+/* Общий фон — нежно-розовый */
+body {
+  background: #ffe6f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* Контейнер без белого фона */
+.container {
+  padding: 30px;
+  border-radius: 20px;
+  /* Убран белый фон и тень, если не нужны */
+  /* Если хочешь лёгкую подложку — раскомментируй: */
+  /* background: rgba(255, 255, 255, 0.6); */
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+  max-width: 90%;
+}
+
+/* Анимированное сердце */
+.heart {
+  width: 80px;
+  height: 80px;
+  background: #e74c3c;
+  margin: 0 auto 20px;
+  border-radius: 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+}
+.heart::before {
+  top: -40px;
+  left: 0;
+}
+.heart::after {
+  top: 0;
+  left: 40px;
+}
+
+/* Кнопка */
+button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 18px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #c0392b;
+}
+
+/* Карточка — теперь без фона */
+#card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 30px;
+  /* Без белого фона — прозрачно */
+  background: transparent;
+}
+
+#card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#card img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+  /* Можно добавить лёгкий бэкграунд под картинку, если нужно */
+}
+
+#card p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #d32f2f; /* Немного приглушённый красный для контраста */
+  background: transparent;
+}
