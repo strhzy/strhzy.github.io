@@ -32,23 +32,23 @@ body {
   transform: translateY(0);
 }
 
-/* Изображение */
 #card img {
   display: block;
-  width: 100%;
+  width: 30%;
   height: auto;
   border-radius: 12px;
-  padding: 0 10px; /* отступы на мобилках */
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
 /* 💻 ПК и планшеты */
 @media (min-width: 768px) {
   #card img {
-    width: 33vw;          /* треть экрана */
-    max-width: 400px;     /* ограничение для больших мониторов */
+    width: 33%;          /* треть контейнера, не экрана */
+    max-width: 280px;    /* жёсткий стоп от гигантизма */
+    min-width: 180px;    /* чтобы не стало крошечным */
     padding: 0;
-    margin: 15px auto;    /* центрирование */
+    margin: 15px auto;   /* центрирование */
   }
 }
 
