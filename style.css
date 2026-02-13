@@ -44,7 +44,7 @@ body {
 /* 💻 ПК и планшеты */
 @media (min-width: 768px) {
   #card img {
-    width: 33%;
+    width: 75%;
     padding: 0;
     margin: 15px auto;   /* центрирование */
   }
