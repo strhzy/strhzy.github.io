@@ -77,21 +77,8 @@ button:hover {
   display: block;
   margin: 15px auto;
   border-radius: 10px;
-  /* По умолчанию — для мобильных */
-  width: 90%;
+  width: 100%;
   height: auto;
-}
-
-/* На планшетах и ПК (ширина экрана ≥ 768px) */
-@media (min-width: 768px) {
-  #card img {
-    width: 100%; /* Примерно треть экрана */
-    max-width: 300px; /* Ограничим, чтобы не было гигантским на 4K */
-  }
-
-  .container {
-    max-width: 800px; /* Центрируем контент на больших экранах */
-  }
 }
 
 #card p {
