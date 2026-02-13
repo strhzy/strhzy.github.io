@@ -1,4 +1,4 @@
-/* Общий фон — нежно-розовый */
+/* Общий фон */
 body {
   background: #ffe6f2;
   display: flex;
@@ -11,18 +11,12 @@ body {
   padding-top: 40px;
 }
 
-/* Контейнер без белого фона */
 .container {
-  padding: 30px;
-  border-radius: 20px;
-  /* Убран белый фон и тень, если не нужны */
-  /* Если хочешь лёгкую подложку — раскомментируй: */
-  /* background: rgba(255, 255, 255, 0.6); */
-  /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+  padding: 20px;
   max-width: 90%;
+  width: 100%;
 }
 
-/* Анимированное сердце */
 .heart {
   width: 80px;
   height: 80px;
@@ -50,7 +44,6 @@ body {
   left: 40px;
 }
 
-/* Кнопка */
 button {
   margin-top: 20px;
   padding: 10px 24px;
@@ -66,13 +59,11 @@ button:hover {
   background: #c0392b;
 }
 
-/* Карточка — теперь без фона */
 #card {
   opacity: 0;
   transform: translateY(100px);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: 30px;
-  /* Без белого фона — прозрачно */
   background: transparent;
 }
 
@@ -81,17 +72,45 @@ button:hover {
   transform: translateY(0);
 }
 
+/* Адаптивное изображение */
 #card img {
-  width: 30%;
-  height: auto;
+  display: block;
+  margin: 15px auto;
   border-radius: 10px;
-  margin: 15px 0;
-  /* Можно добавить лёгкий бэкграунд под картинку, если нужно */
+  /* По умолчанию — для мобильных */
+  width: 90%;
+  height: auto;
+}
+
+/* На планшетах и ПК (ширина экрана ≥ 768px) */
+@media (min-width: 768px) {
+  #card img {
+    width: 33%; /* Примерно треть экрана */
+    max-width: 300px; /* Ограничим, чтобы не было гигантским на 4K */
+  }
+
+  .container {
+    max-width: 800px; /* Центрируем контент на больших экранах */
+  }
 }
 
 #card p {
   margin: 10px 0;
   font-size: 18px;
-  color: #d32f2f; /* Немного приглушённый красный для контраста */
+  color: #d32f2f;
   background: transparent;
+}
+
+/* Дополнительно: чуть уменьшим шрифт на маленьких экранах */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  #card p {
+    font-size: 16px;
+  }
+  button {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
 }
