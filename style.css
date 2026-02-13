@@ -34,7 +34,7 @@ body {
 
 #card img {
   display: block;
-  width: 30%;
+  width: 100%;
   height: auto;
   border-radius: 12px;
   padding: 0 10px;
@@ -44,9 +44,7 @@ body {
 /* 💻 ПК и планшеты */
 @media (min-width: 768px) {
   #card img {
-    width: 33%;          /* треть контейнера, не экрана */
-    max-width: 280px;    /* жёсткий стоп от гигантизма */
-    min-width: 180px;    /* чтобы не стало крошечным */
+    width: 33%;
     padding: 0;
     margin: 15px auto;   /* центрирование */
   }
